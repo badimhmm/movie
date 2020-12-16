@@ -1,0 +1,41 @@
+<%- include('partials/header') %> 
+<%- include('partials/nav') %> 
+<div class="container">
+  <div>
+    <br>
+    <p class="h2 text-center">Edit Cast</p>
+    <br>
+  </div>
+  <div>
+    <form action="/casts/<%= data.id %>/edit" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="first_name">First Name</label>
+        <input class="form-control" type="text" id="first_name" name="first_name" value="<%= data.first_name %>"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="last_name">Last Name</label>
+        <input class="form-control" type="text" id="last_name" name="last_name" value="<%= data.last_name %>"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="birth_year">Birth Year</label>
+        <input class="form-control" type="number" id="birth_year" name="birth_year" value="<%= data.birth_year %>"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="phone_number">Phone Number</label>
+        <input class="form-control" type="text" id="phone_number" name="phone_number" value="<%= data.phone_number %>"/>
+      </div>
+      <div>
+        <label class="form-label" for="gender">Gender</label> <br>
+        <input type="radio" id="male" name="gender" value="male" <%= data.gender == 'male'? 'checked':'' %>/>
+        <label class="form-label" for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" <%= data.gender == 'female'? 'checked':'' %>/>
+        <label class="form-label" for="female">Female</label>
+      </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Update</button>
+        <button class="btn btn-danger"><a href="/casts">Cancel</a></button>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer') %> 

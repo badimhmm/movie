@@ -1,0 +1,41 @@
+<%- include('partials/header') %> 
+<%- include('partials/nav') %> 
+<div class="container">
+  <div>
+    <br>
+    <p class="h2 text-center">Add Cast</p>
+    <br>
+  </div>
+  <div>
+    <form action="/casts/add" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="first_name">First Name</label>
+        <input class="form-control" type="text" id="first_name" name="first_name" placeholder="e.g: John"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="last_name">Last Name</label>
+        <input class="form-control" type="text" id="last_name" name="last_name" placeholder="e.g: Doe"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="birth_year">Birth Year</label>
+        <input class="form-control" type="number" id="birth_year" name="birth_year" placeholder="e.g: 1980"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="phone_number">Phone Number</label>
+        <input class="form-control" type="text" id="phone_number" name="phone_number" placeholder="e.g: +44 853 2929 9292"/>
+      </div>
+      <div>
+        <label class="form-label" for="gender">Gender</label> <br>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label class="form-label" for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label class="form-label" for="female">Female</label>
+      </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-danger"><a href="/casts">Cancel</a></button>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer') %> 

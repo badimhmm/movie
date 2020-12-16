@@ -1,0 +1,43 @@
+<%- include('partials/header') %> 
+<%- include('partials/nav') %> 
+<div class="container">
+  <div>
+    <br>
+    <h1 class="display-2">Movies</h1>
+    <br>
+  </div>
+  <div>
+    <button class="btn btn-info"><a href="/movies/add">Add Movie</a></button>
+    <table class="table table-hover">
+      <thead>
+        <th scope="col">Movie</th>
+        <th scope="col">Released Year</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Production House</th>
+        <th scope="col">Actions</th>
+      </thead>
+      <tbody>
+        <% data.forEach(el => { %>
+          <tr>
+            <td><%= el.name %> </td>
+            <td><%= el.released_year %> </td>
+            <td><%= el.rating %> </td>
+            <td><%= el.genre %> </td>
+            <% if (el.ProdHouseId) { %>
+              <td><%= el.ProductionHouse.name_prodHouse %></td> 
+            <% } else { %> 
+              <td>Unknown</td>
+            <% } %> 
+            <td>
+              <button class="btn btn-success"><a href="/movies/<%= el.id %>/edit">Edit</a></button>
+              <button class="btn btn-danger"><a href="/movies/<%= el.id %>/delete">Delete</a></button>
+              <button class="btn btn-outline-success"><a href="/movies/<%= el.id %>/add-moviecasts">Add Cast</a></button>
+            </td>
+          </tr>
+        <% }) %> 
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('partials/footer') %> 
