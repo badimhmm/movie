@@ -2,22 +2,16 @@
   "development": {
     "username": "postgres",
     "password": "badi12345",
-    "database": "db_movie_p1w4",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "postgres",
-    "password": "badi12345",
-    "database": "db_movie_p1w4",
+    "database": "urlshortener_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "badi12345",
-    "database": "db_movie_p1w4",
+    "database": "urlshortener_production",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   }
 }
