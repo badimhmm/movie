@@ -7,10 +7,11 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "badi12345",
-    "database": "urlshortener_production",
-    "host": "127.0.0.1",
+    "username": "uxmnxtqigxfptq",
+    "password": "85e1c48111ec6b9aa73d1142f98be8f46fb09b1ddb2b92179c6e479bc5bea7f6",
+    "database": "d93q38ljsker58",
+    "port":5432,
+    "host": "ec2-54-157-88-70.compute-1.amazonaws.com",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
   }
