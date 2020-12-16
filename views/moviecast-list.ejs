@@ -1,0 +1,33 @@
+<%- include('partials/header') %> 
+<%- include('partials/nav') %> 
+<div class="container">
+  <div>
+    <br>
+    <p class="h2 text-center">List Movies by:</p>
+    <% if (data) { %>
+      <h1 class="display-2"><%= data.getFullName() %> </h1>
+    <br>
+  </div>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <th scope="col">Movie</th>
+        <th scope="col">Released Year</th>
+        <th scope="col">Age when Movie Released</th>
+        <th scope="col">Role</th>
+      </thead>
+      <tbody>
+        <% data.Movies.forEach(el => { %>
+          <tr>
+            <td><%= el.name %> </td>
+            <td><%= el.released_year %> </td>
+            <td><%= getAge(data.birth_year, el.released_year) %> </td>
+            <td><%= el.MovieCast.role %> </td>
+          </tr>
+        <% }) %> 
+      </tbody>
+    </table>
+  <% } %> 
+  </div>
+</div>
+<%- include('partials/footer') %> 

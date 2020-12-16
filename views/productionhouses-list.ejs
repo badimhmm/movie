@@ -1,0 +1,26 @@
+<%- include('partials/header') %> 
+<%- include('partials/nav') %> 
+<div class="container">
+  <div>
+    <br>
+    <h1 class="display-2">Production Houses</h1>
+    <br>
+  </div>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <th scope="col">Name</th>
+        <th scope="col">Headquarters</th>
+      </thead>
+      <tbody>
+        <% data.forEach(el => { %>
+          <tr>
+            <td><%= el.name_prodHouse %> </td>
+            <td><%= el.headquarters %> </td>
+          </tr>
+        <% }) %> 
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('partials/footer') %> 
