@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "badi12345",
+    "password": "p@ssw0rd",
     "database": "urlshortener_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
@@ -12,7 +12,6 @@
     "database": "d93q38ljsker58",
     "port":5432,
     "host": "ec2-54-157-88-70.compute-1.amazonaws.com",
-    "dialect": "postgres",
-    "use_env_variable": "DATABASE_URL"
+    "dialect": "postgres"
   }
 }
